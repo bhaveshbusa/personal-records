@@ -1,0 +1,18 @@
+BRIGHTBROKER INVESTMENTS — CONTRACT NOTE
+Contract reference: CN-0000317 (synthetic example — not a real document)
+
+We confirm the following trade executed on your account:
+
+Trade:            BUY
+Security:         Vanguard FTSE All-World UCITS ETF (VWRL)
+ISIN:             IE00B3RBWM25
+Quantity:         12
+Price per unit:   £98.42
+Consideration:    £1,181.04
+Commission:       £11.95
+Settlement amount payable: £1,192.99
+
+Trade date:       02 July 2026
+Settlement date:  04 July 2026
+
+BrightBroker Investments Ltd

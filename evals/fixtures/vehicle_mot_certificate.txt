@@ -1,0 +1,12 @@
+MOT TEST CERTIFICATE
+Test number: 4242 1234 5678 (synthetic example — not a real document)
+
+Vehicle: FORD FIESTA
+Registration mark: XY19 ZAB
+Odometer reading: 41,230 miles
+
+Test result: PASS
+Date of test: 10 October 2026
+Expiry date: 09 October 2027
+
+Testing station: Exampletown Motors (station 100042)

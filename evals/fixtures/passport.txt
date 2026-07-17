@@ -1,0 +1,13 @@
+UNITED KINGDOM OF EXAMPLIA — PASSPORT
+(synthetic example — not a real document; fictional issuing state)
+
+Type: P                      Code: EXA
+Passport number: 900000042
+
+Surname: CUSTOMER
+Given names: ALEX
+Nationality: EXAMPLIAN
+Date of birth: 14 FEB 1990
+Date of issue: 03 JAN 2020
+Date of expiry: 03 JAN 2030
+Authority: EPO EXAMPLETOWN

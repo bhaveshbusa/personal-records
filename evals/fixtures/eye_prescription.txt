@@ -1,0 +1,14 @@
+CLEARVIEW OPTICIANS — SPECTACLE PRESCRIPTION
+(synthetic example — not a real document)
+
+Patient: A. Customer
+Date of examination: 12 May 2026
+Prescription expires: 12 May 2028
+
+           SPH      CYL      AXIS
+Right:    -1.25    -0.50     180
+Left:     -1.00    -0.75      10
+
+Pupillary distance: 62 mm
+
+Optometrist: J. Lens, ClearView Opticians

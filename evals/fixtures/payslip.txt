@@ -1,0 +1,14 @@
+ACME WIDGETS LTD — PAYSLIP
+(synthetic example — not a real document)
+
+Employee: A. Customer          Employee no: 00417
+Pay date: 28 June 2026         Pay period: 01 June 2026 – 30 June 2026
+
+Gross pay ............................. £2,800.00
+Income tax ............................ £  420.00
+National Insurance .................... £  280.00
+
+NET PAY ............................... £2,100.00
+
+Paid by BACS to account ending 1234.
+Acme Widgets Ltd, payroll department

@@ -1,0 +1,173 @@
+{
+  "_comment": [
+    "Eval manifest (2R.6). Paths are relative to this file. Every registry",
+    "doc_type has a synthetic twin, plus the MultiCover golden case and an",
+    "unknown-document case. expected_fields hold ground-truth values (the",
+    "fixtures are synthetic, so ground truth is known); comparison is",
+    "lenient on formatting (case, whitespace, currency symbols), strict on",
+    "value. Cases run in isolated temp roots — order carries no state."
+  ],
+  "cases": [
+    {
+      "name": "renewal_quote_motor",
+      "file": "../examples/motor_renewal_quote.txt",
+      "expected_doc_type": "renewal_quote",
+      "expected_outcome": "accepted",
+      "expected_lines": [
+        {"product": "motor", "annual_premium": 378.90, "renewal_date": "2026-10-14"}
+      ]
+    },
+    {
+      "name": "multicover_golden",
+      "file": "../examples/multicover_renewal_invitation.txt",
+      "expected_doc_type": "renewal_quote",
+      "expected_outcome": "review",
+      "expect_reason_contains": ["multi-line"],
+      "expected_lines": [
+        {"product": "motor", "annual_premium": 412.50},
+        {"product": "home", "annual_premium": 238.20}
+      ],
+      "expected_stated_total": 650.70
+    },
+    {
+      "name": "policy_schedule",
+      "file": "../examples/motor_policy_schedule.txt",
+      "expected_doc_type": "policy_schedule",
+      "expected_outcome": "accepted",
+      "expected_fields": {
+        "policy_end_date": "2026-10-14",
+        "annual_premium": 352.40,
+        "vehicle_registration": "XY19 ZAB",
+        "policy_number": "SM-0000042",
+        "provider": "SwiftSure Insurance Ltd",
+        "ncd_years": 6
+      }
+    },
+    {
+      "name": "certificate",
+      "file": "fixtures/motor_certificate.txt",
+      "expected_doc_type": "certificate",
+      "expected_outcome": "stored",
+      "expected_fields": {
+        "policy_number": "SM-0000042",
+        "vehicle_registration": "XY19 ZAB",
+        "policy_end_date": "2026-10-14"
+      }
+    },
+    {
+      "name": "ncd_letter",
+      "file": "fixtures/ncd_letter.txt",
+      "expected_doc_type": "ncd_letter",
+      "expected_outcome": "accepted",
+      "expected_fields": {
+        "ncd_years": 6,
+        "policy_number": "SM-0000042"
+      }
+    },
+    {
+      "name": "policy_wording",
+      "file": "../examples/motor_policy_wording.txt",
+      "expected_doc_type": "policy_wording",
+      "expected_outcome": "stored"
+    },
+    {
+      "name": "claim_evidence",
+      "file": "fixtures/claim_correspondence.txt",
+      "expected_doc_type": "claim_evidence",
+      "expected_outcome": "stored"
+    },
+    {
+      "name": "share_contract_note",
+      "file": "fixtures/share_contract_note.txt",
+      "expected_doc_type": "share_contract_note",
+      "expected_outcome": "review",
+      "expect_reason_contains": ["no event vocabulary"],
+      "expected_fields": {
+        "trade_direction": "buy",
+        "settlement_amount": 1192.99,
+        "trade_date": "2026-07-02",
+        "quantity": 12
+      }
+    },
+    {
+      "name": "eye_prescription",
+      "file": "fixtures/eye_prescription.txt",
+      "expected_doc_type": "eye_prescription",
+      "expected_outcome": "review",
+      "expect_reason_contains": ["no event vocabulary"],
+      "expected_fields": {
+        "prescription_date": "2026-05-12",
+        "patient_name": "A. Customer",
+        "right_sphere": -1.25,
+        "pupillary_distance": 62
+      }
+    },
+    {
+      "name": "payslip",
+      "file": "fixtures/payslip.txt",
+      "expected_doc_type": "payslip",
+      "expected_outcome": "review",
+      "expect_reason_contains": ["no event vocabulary"],
+      "expected_fields": {
+        "pay_date": "2026-06-28",
+        "gross_pay": 2800.00,
+        "net_pay": 2100.00
+      }
+    },
+    {
+      "name": "council_tax_bill",
+      "file": "fixtures/council_tax_bill.txt",
+      "expected_doc_type": "council_tax_bill",
+      "expected_outcome": "review",
+      "expect_reason_contains": ["no event vocabulary"],
+      "expected_fields": {
+        "annual_amount": 1842.00,
+        "account_number": "CT-00042917",
+        "property_band": "C"
+      }
+    },
+    {
+      "name": "utility_bill",
+      "file": "fixtures/utility_bill.txt",
+      "expected_doc_type": "utility_bill",
+      "expected_outcome": "review",
+      "expect_reason_contains": ["no event vocabulary"],
+      "expected_fields": {
+        "amount_due": 196.34,
+        "billing_period_end": "2026-06-30",
+        "utility_type": "electricity"
+      }
+    },
+    {
+      "name": "passport",
+      "file": "fixtures/passport.txt",
+      "expected_doc_type": "passport",
+      "expected_outcome": "review",
+      "expect_reason_contains": ["no event vocabulary"],
+      "expected_fields": {
+        "passport_number": "900000042",
+        "expiry_date": "2030-01-03",
+        "date_of_birth": "1990-02-14"
+      }
+    },
+    {
+      "name": "vehicle_mot_certificate",
+      "file": "fixtures/vehicle_mot_certificate.txt",
+      "expected_doc_type": "vehicle_mot_certificate",
+      "expected_outcome": "review",
+      "expect_reason_contains": ["no event vocabulary"],
+      "expected_fields": {
+        "expiry_date": "2027-10-09",
+        "vehicle_registration": "XY19 ZAB",
+        "test_result": "pass"
+      }
+    },
+    {
+      "name": "unknown_leaflet",
+      "file": "fixtures/unknown_leaflet.txt",
+      "expected_doc_type": "unknown",
+      "expected_outcome": "review",
+      "expect_reason_contains": ["classification"]
+    }
+  ]
+}
