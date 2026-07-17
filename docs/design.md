@@ -191,7 +191,7 @@ sequenceDiagram
             R->>E: Append verified accepted event
             E->>P: Rebuild current view
         else User rejects
-            R-->>R: Retain evidence; record no proposed fact
+            R-->>R: Retain evidence, record no proposed fact
         end
     end
 ```
